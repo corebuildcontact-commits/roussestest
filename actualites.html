@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Actualités · Mairie des Rousses</title>
+  <meta name="description" content="Toutes les actualités de la commune des Rousses : conseils municipaux, travaux, vie associative, culture." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231C0808'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='400' text-anchor='middle' fill='%23C9A96E'%3ER%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/actualites.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- ════════════════════════════════════════════════════════════
+       WIDGET MÉTÉO — Concierge premium, fixe en tête de page
+       ════════════════════════════════════════════════════════════ -->
+  <div class="weather-widget" role="region" aria-label="Météo et conditions en direct — Les Rousses 1107m">
+    <div class="weather-widget__inner">
+
+      <div class="ww-identity">
+        <span class="ww-live" aria-hidden="true">
+          <span class="ww-live__dot"></span>
+          En direct
+        </span>
+        <div class="ww-sep" aria-hidden="true"></div>
+        <div class="ww-location">
+          <span class="ww-location__name">Les Rousses</span>
+          <span class="ww-location__alt">1107 m · Haut-Jura</span>
+        </div>
+      </div>
+
+      <div class="ww-sep" aria-hidden="true"></div>
+
+      <div class="ww-temperature" aria-label="Température : moins 4 degrés Celsius, neige légère">
+        <span class="ww-temp-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+            <path d="M12 2v20M2 12h20M4.5 4.5l15 15M19.5 4.5l-15 15M12 5l-2 2M12 5l2 2M12 19l-2-2M12 19l2-2M5 12l2-2M5 12l2 2M19 12l-2-2M19 12l-2 2"/>
+          </svg>
+        </span>
+        <div>
+          <div class="ww-temp-display">
+            <span class="ww-temp-num">−4</span>
+            <span class="ww-temp-unit">°C</span>
+          </div>
+          <span class="ww-temp-cond">Neige légère</span>
+        </div>
+      </div>
+
+      <div class="ww-sep" aria-hidden="true"></div>
+
+      <ul class="ww-stats" aria-label="Conditions détaillées">
+        <li class="ww-stat">
+          <svg class="ww-stat__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M2 8h9a3 3 0 1 0-3-3"/><path d="M2 11h6a2 2 0 1 1-2 2"/>
+          </svg>
+          <span class="ww-stat__val">12<small>km/h</small></span>
+          <span class="ww-stat__lbl">Vent N</span>
+        </li>
+        <li class="ww-stat">
+          <svg class="ww-stat__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M8 2C5.5 5 3 7.5 3 10a5 5 0 0 0 10 0c0-2.5-2.5-5-5-8z"/>
+          </svg>
+          <span class="ww-stat__val">85<small>cm</small></span>
+          <span class="ww-stat__lbl">Manteau</span>
+        </li>
+        <li class="ww-stat">
+          <svg class="ww-stat__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/>
+          </svg>
+          <span class="ww-stat__val">4<small>km</small></span>
+          <span class="ww-stat__lbl">Visibilité</span>
+        </li>
+        <li class="ww-stat">
+          <svg class="ww-stat__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M2 14l3-5 3 3 3-6 3 4"/><path d="M1 14h14"/>
+          </svg>
+          <span class="ww-stat__val">42<small>/48</small></span>
+          <span class="ww-stat__lbl">Pistes</span>
+        </li>
+      </ul>
+
+      <div class="ww-sep" aria-hidden="true"></div>
+
+      <div class="ww-forecast" aria-label="Prévisions météo sur 3 jours">
+        <div class="ww-fc">
+          <span class="ww-fc__day">Mar</span>
+          <svg class="ww-fc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+          </svg>
+          <span class="ww-fc__temp">−2°</span>
+        </div>
+        <div class="ww-fc">
+          <span class="ww-fc__day">Mer</span>
+          <svg class="ww-fc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/>
+            <line x1="8" y1="16" x2="8.01" y2="16"/>
+            <line x1="8" y1="20" x2="8.01" y2="20"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
+            <line x1="12" y1="22" x2="12.01" y2="22"/>
+            <line x1="16" y1="16" x2="16.01" y2="16"/>
+            <line x1="16" y1="20" x2="16.01" y2="20"/>
+          </svg>
+          <span class="ww-fc__temp">−6°</span>
+        </div>
+        <div class="ww-fc">
+          <span class="ww-fc__day">Jeu</span>
+          <svg class="ww-fc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <span class="ww-fc__temp">−1°</span>
+        </div>
+      </div>
+
+      <div class="ww-extras">
+        <div class="ww-sep" aria-hidden="true"></div>
+        <div class="ww-suntimes" aria-label="Lever et coucher du soleil">
+          <span>
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" width="9" height="9"><path d="M6 8V4M3 7l3-3 3 3M1 9h10"/></svg>
+            07:38
+          </span>
+          <span>
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" width="9" height="9"><path d="M6 4v4M3 5l3 3 3-3M1 9h10"/></svg>
+            17:42
+          </span>
+        </div>
+        <div class="ww-sep" aria-hidden="true"></div>
+        <a href="tel:0384600255" class="ww-phone" aria-label="Appeler la mairie : 03 84 60 02 55">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+          </svg>
+          <span>03 84 60 02 55</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" data-transparent="true">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">
+          <img src="assets/logo-les-rousses.svg" alt="" width="56" height="37" />
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Mairie des Rousses</span>
+          <span class="brand__sub">Haut-Jura · 1107m</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html" class="nav__link">Accueil</a>
+        <a href="index.html#decouvrir" class="nav__link">Découvrir</a>
+        <a href="index.html#demarches" class="nav__link">Démarches</a>
+        <a href="actualites.html" class="nav__link" aria-current="page">Actualités</a>
+        <a href="index.html#agenda" class="nav__link">Agenda</a>
+        <a href="#" class="nav__link">Contact</a>
+        <a href="#" class="btn btn--primary nav__cta">Espace citoyen</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="drawer">
+        <span class="nav-toggle__icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer__overlay" data-open="false" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" data-open="false" aria-label="Menu mobile">
+    <button class="drawer__close" aria-label="Fermer le menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l14 14M16 2L2 16" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="drawer__list" aria-label="Menu mobile">
+      <a href="index.html" class="drawer__link">Accueil</a>
+      <a href="index.html#decouvrir" class="drawer__link">Découvrir</a>
+      <a href="index.html#demarches" class="drawer__link">Démarches</a>
+      <a href="actualites.html" class="drawer__link">Actualités</a>
+      <a href="index.html#agenda" class="drawer__link">Agenda</a>
+      <a href="#" class="drawer__link">Contact</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=2400&q=80" alt="" aria-hidden="true" />
+      </div>
+      <div class="page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'ariane">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb__sep">/</span>
+          <span aria-current="page">Actualités</span>
+        </nav>
+        <div class="page-hero__eyebrow">Toute l'info municipale</div>
+        <!-- WP: the_title() -->
+        <h1 class="page-hero__title"><span data-split>Actualités</span></h1>
+        <p class="page-hero__lead">Comptes-rendus, projets, travaux, vie associative et culturelle. L'information officielle et celle des acteurs du territoire.</p>
+      </div>
+    </section>
+
+    <!-- Filtres + recherche -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Filtres d'actualités">
+          <button class="tab" role="tab" aria-selected="true" data-filter="all">
+            Toutes
+            <span class="tab__count">42</span>
+            <span class="tab__indicator"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="commune">
+            Commune
+            <span class="tab__count">18</span>
+            <span class="tab__indicator"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="travaux">
+            Travaux
+            <span class="tab__count">9</span>
+            <span class="tab__indicator"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="culture">
+            Culture &amp; vie locale
+            <span class="tab__count">11</span>
+            <span class="tab__indicator"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="autres">
+            Autres acteurs
+            <span class="tab__count">4</span>
+            <span class="tab__indicator"></span>
+          </button>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-field">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4" stroke-linecap="round"/></svg>
+            <input type="search" placeholder="Rechercher dans les actualités…" aria-label="Rechercher" />
+          </div>
+          <select class="sort-select" aria-label="Trier">
+            <option>Plus récentes d'abord</option>
+            <option>Plus anciennes d'abord</option>
+            <option>Par catégorie</option>
+          </select>
+        </div>
+
+        <!-- Article à la une -->
+        <article class="news-featured reveal">
+          <div class="news-featured__media">
+            <img src="https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?auto=format&fit=crop&w=1600&q=80" alt="Vote du conseil municipal" loading="lazy" />
+          </div>
+          <div class="news-featured__body">
+            <span class="tag tag--commune">À la une · Commune</span>
+            <h2 class="news-featured__title">Budget 2026 voté à l'unanimité : 4,8 M€ d'investissement</h2>
+            <p class="news-featured__excerpt">Le conseil municipal du 12 avril a adopté le budget primitif. Au programme : extension de l'école élémentaire, réfection de la route du Lac, et un plan vélo communal.</p>
+            <div class="news-featured__meta">
+              <span>12 avril 2026</span>
+              <span>par Service communication</span>
+              <span>6 min de lecture</span>
+            </div>
+            <div>
+              <a href="#" class="btn btn--primary">Lire l'article complet
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- WP: have_posts() loop -->
+        <div class="news-grid reveal-stagger">
+          <article class="news-card" data-tilt>
+            <div class="news-card__media">
+              <img class="news-card__img" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Travaux de voirie" loading="lazy" width="900" height="600" />
+              <div class="news-card__date"><span class="news-card__date__day">28</span><span class="news-card__date__month">Mar</span></div>
+            </div>
+            <div class="news-card__body">
+              <span class="tag tag--travaux">Travaux</span>
+              <h3 class="news-card__title">Réfection de la Route du Lac : déviation jusqu'au 30 juin</h3>
+              <p class="news-card__excerpt">Le tronçon entre la place du village et l'embarcadère sera fermé. Déviation par la Combe des Riots.</p>
+              <div class="news-card__footer">
+                <span class="news-card__readmore">Lire <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></span>
+                <span style="color: var(--color-text-muted); font-size: 0.78rem;">2 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-tilt>
+            <div class="news-card__media">
+              <img class="news-card__img" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80" alt="Festival" loading="lazy" width="900" height="600" />
+              <div class="news-card__date"><span class="news-card__date__day">02</span><span class="news-card__date__month">Mai</span></div>
+            </div>
+            <div class="news-card__body">
+              <span class="tag tag--culture">Culture</span>
+              <h3 class="news-card__title">Festival des Cimes : appel aux bénévoles 2026</h3>
+              <p class="news-card__excerpt">Trois jours de musique au pied du Risoux. La commune recherche 80 bénévoles.</p>
+              <div class="news-card__footer">
+                <span class="news-card__readmore">Lire <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></span>
+                <span style="color: var(--color-text-muted); font-size: 0.78rem;">3 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-tilt>
+            <div class="news-card__media">
+              <img class="news-card__img" src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80" alt="École" loading="lazy" width="900" height="600" />
+              <div class="news-card__date"><span class="news-card__date__day">22</span><span class="news-card__date__month">Mar</span></div>
+            </div>
+            <div class="news-card__body">
+              <span class="tag tag--commune">Commune</span>
+              <h3 class="news-card__title">Inscriptions scolaires 2026-2027 : ouverture le 1er avril</h3>
+              <p class="news-card__excerpt">Les inscriptions à l'école maternelle et élémentaire des Rousses sont ouvertes en ligne et en mairie.</p>
+              <div class="news-card__footer">
+                <span class="news-card__readmore">Lire <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></span>
+                <span style="color: var(--color-text-muted); font-size: 0.78rem;">3 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-tilt>
+            <div class="news-card__media">
+              <img class="news-card__img" src="https://images.unsplash.com/photo-1606117331085-5760e3b58520?auto=format&fit=crop&w=900&q=80" alt="Fort des Rousses" loading="lazy" width="900" height="600" />
+              <div class="news-card__date"><span class="news-card__date__day">15</span><span class="news-card__date__month">Mar</span></div>
+            </div>
+            <div class="news-card__body">
+              <span class="tag tag--culture">Culture</span>
+              <h3 class="news-card__title">Visites guidées du Fort : nouvelle saison dès avril</h3>
+              <p class="news-card__excerpt">L'Office de tourisme propose 4 nouveaux parcours, dont une visite "coulisses" des caves d'affinage.</p>
+              <div class="news-card__footer">
+                <span class="news-card__readmore">Lire <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></span>
+                <span style="color: var(--color-text-muted); font-size: 0.78rem;">4 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-tilt>
+            <div class="news-card__media">
+              <img class="news-card__img" src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=900&q=80" alt="Lac" loading="lazy" width="900" height="600" />
+              <div class="news-card__date"><span class="news-card__date__day">08</span><span class="news-card__date__month">Mar</span></div>
+            </div>
+            <div class="news-card__body">
+              <span class="tag tag--travaux">Travaux</span>
+              <h3 class="news-card__title">Plan vélo : 4 km de pistes cyclables d'ici 2027</h3>
+              <p class="news-card__excerpt">Le plan vélo communal lance sa première phase entre le centre-bourg et le lac.</p>
+              <div class="news-card__footer">
+                <span class="news-card__readmore">Lire <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></span>
+                <span style="color: var(--color-text-muted); font-size: 0.78rem;">5 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card" data-tilt>
+            <div class="news-card__media">
+              <img class="news-card__img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=80" alt="Pistes" loading="lazy" width="900" height="600" />
+              <div class="news-card__date"><span class="news-card__date__day">01</span><span class="news-card__date__month">Mar</span></div>
+            </div>
+            <div class="news-card__body">
+              <span class="tag tag--commune">Commune</span>
+              <h3 class="news-card__title">Bilan saison hivernale : fréquentation en hausse de 8%</h3>
+              <p class="news-card__excerpt">220 000 journées-skieurs enregistrées sur la station des 4 villages.</p>
+              <div class="news-card__footer">
+                <span class="news-card__readmore">Lire <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></span>
+                <span style="color: var(--color-text-muted); font-size: 0.78rem;">3 min</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Newsletter -->
+        <section class="newsletter" aria-label="Inscription newsletter">
+          <div>
+            <span class="eyebrow" style="color: var(--color-accent-soft);">Newsletter municipale</span>
+            <h3 style="margin-top: 0.5rem; color: var(--color-snow);">L'essentiel des Rousses, une fois par mois.</h3>
+            <p style="color: rgba(251,248,242,0.65);">Pas de spam. Pas de pub. Les actualités, l'agenda et les démarches utiles, livrés dans votre boîte mail.</p>
+          </div>
+          <form onsubmit="event.preventDefault(); alert('Merci ! (démo)');">
+            <input type="email" placeholder="vous@email.fr" aria-label="Adresse e-mail" required />
+            <button type="submit" class="btn btn--primary">S'abonner</button>
+          </form>
+        </section>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Pagination">
+          <button class="pagination__btn pagination__btn--arrow" disabled aria-disabled="true">← Précédent</button>
+          <button class="pagination__btn" aria-current="page">1</button>
+          <button class="pagination__btn">2</button>
+          <button class="pagination__btn">3</button>
+          <button class="pagination__btn">4</button>
+          <span style="padding: 0 0.5rem; color: var(--color-text-muted);" aria-hidden="true">…</span>
+          <button class="pagination__btn">7</button>
+          <button class="pagination__btn pagination__btn--arrow">Suivant →</button>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z">
+          <animate attributeName="d" dur="12s" repeatCount="indefinite"
+            values="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z;
+                    M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z;
+                    M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" />
+        </path>
+      </svg>
+    </div>
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="brand">
+          <span class="brand__logo" aria-hidden="true">
+            <img src="assets/logo-les-rousses.svg" alt="" width="56" height="37" style="filter:brightness(0) invert(1) !important;" />
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">Mairie des Rousses</span>
+            <span class="brand__sub">Haut-Jura · 1107m</span>
+          </span>
+        </a>
+        <p>495 rue Pasteur, 39220 Les Rousses<br />Standard : 03 84 60 00 00<br />mairie@lesrousses.com</p>
+      </div>
+      <div>
+        <h4>La mairie</h4>
+        <ul>
+          <li><a href="#">Conseil municipal</a></li>
+          <li><a href="#">Comptes-rendus</a></li>
+          <li><a href="#">Budget</a></li>
+          <li><a href="#">Marchés publics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Vivre aux Rousses</h4>
+        <ul>
+          <li><a href="#">Écoles</a></li>
+          <li><a href="#">Petite enfance</a></li>
+          <li><a href="#">Vie associative</a></li>
+          <li><a href="#">Salles communales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul style="font-size: 0.9rem;">
+          <li><strong style="color: var(--color-snow); font-weight: 500;">Lun–Ven</strong><br />9h–12h · 14h–17h30</li>
+          <li style="margin-top: 0.5rem;"><strong style="color: var(--color-snow); font-weight: 500;">Samedi</strong><br />9h–12h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 Mairie des Rousses</span>
+      <div class="site-footer__bottom__links">
+        <a href="#">Mentions légales</a>
+        <a href="#">Données personnelles</a>
+        <a href="#">Accessibilité</a>
+        <button data-toggle-contrast type="button">Contraste élevé</button>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retour en haut de page">
+    <svg width="52" height="52" viewBox="0 0 52 52">
+      <circle cx="26" cy="26" r="24.5" class="back-to-top__bg" />
+      <circle cx="26" cy="26" r="24.5" class="back-to-top__progress" />
+    </svg>
+    <svg class="back-to-top__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M8 13V3M3 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+      });
+    });
+  </script>
+</body>
+</html>
